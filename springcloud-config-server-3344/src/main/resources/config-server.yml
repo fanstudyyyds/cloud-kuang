@@ -1,0 +1,23 @@
+spring:
+  profiles: dev
+  application:
+    name: springcloud-config-server-dev
+#eureka配置
+eureka:
+  instance:
+    hostname: eurek7001.com
+  client:
+    server-url:
+      defaultZone: http://eurek7001.com:7001/eureka/
+
+---
+spring:
+  profiles: test
+  application:
+    name: springcloud-config-server-test
+eureka:
+  instance:
+    hostname: eurek7001.com
+  client:
+    server-url:
+      defaultZone: http://eurek7001.com:7001/eureka/

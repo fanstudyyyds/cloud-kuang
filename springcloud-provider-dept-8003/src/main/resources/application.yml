@@ -1,0 +1,32 @@
+server:
+  port: 8003
+mybatis:
+  type-aliases-package: com.fan.springcloud.pojo
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+
+spring:
+  application:
+    name: springcloud-provider-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource #数据源
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db03?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+
+
+
+#eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eurek7001.com:7001/eureka/,http://eurek7002.com:7002/eureka/,http://eurek7003.com:7003/eureka/
+  instance:
+    insance-id: springcloud-provider-dept8003
+
+#info配置
+info:
+  app.name: fan
+  company.name: hhhh.com

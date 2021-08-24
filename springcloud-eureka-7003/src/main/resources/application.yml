@@ -1,0 +1,11 @@
+server:
+  port: 7003
+#eureka配置
+eureka:
+  instance:
+    hostname: eurek7003.com
+  client:
+    register-with-eureka: false #表示是否向eureka配置注册中心注册自己
+    fetch-registry: false #如果为fslse表示自己是注册中心
+    server-url: #监控页面
+      defaultZone: http://eurek7001.com:7001/eureka/,http://eurek7002.com:7002/eureka/
